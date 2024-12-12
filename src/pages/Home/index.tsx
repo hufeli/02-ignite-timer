@@ -45,6 +45,7 @@ export const Home = () => {
   const [cycles, setCycles] = useState<Cycle[]>([])
   const [amountSecondsPassed, setAmountSecondsPassed] = useState<number>(0)
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
+  
   const newCycleForm = useForm<NewCycleFormData>({
     resolver: zodResolver(newCycleFormValidationSchema),
     defaultValues: {
